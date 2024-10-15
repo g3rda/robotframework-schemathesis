@@ -48,7 +48,7 @@ class SchemathesisLibrary:
         
     def get_failed_interactions(self):
         # Parse the YAML content
-        with open(self.cassette_path, 'r') as file:
+        with open(self.cassette_path, 'r', errors='ignore') as file:
             yaml_content = file.read()
                 
             data = yaml.safe_load(yaml_content)
